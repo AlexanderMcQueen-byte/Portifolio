@@ -1,25 +1,29 @@
-# Folio— Freelance Portfolio Template (HTML · Tailwind · Alpine.js)
-#### Preview
+# Alexander McQueen Portfolio
 
- - [Demo](https://themewagon.github.io/folio-html/)
+A personal portfolio website built with HTML, Tailwind CSS, and Alpine.js.
 
-#### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/folio-html/)
+## Overview
 
-## Getting Started
+This project is a custom developer portfolio for Alexander McQueen, featuring a landing page, project gallery, blog, and case-study style content.
 
-1. Clone Repository
-```
-git clone https://github.com/themewagon/folio-html.git
-```
+## Local run
 
-## Author 
-```
-Design and code is completely written by Laurent Begey and development team. 
+Open the project directly in the browser or serve it locally with a simple static server.
+
+```bash
+cd folio-tailwind-1.0.0
+python3 -m http.server 8000
 ```
 
-## License
+Then visit:
 
- - Design and Code is Copyright &copy; <a href="https://lbegey78.gumroad.com/" target="_blank">Laurent Begey</a>
- - Licensed cover under [MIT]
- - Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+```text
+http://localhost:8000
+```
+
+## Stack
+
+- HTML5
+- Tailwind CSS
+- Alpine.js
+- Static deployment-friendly structure
