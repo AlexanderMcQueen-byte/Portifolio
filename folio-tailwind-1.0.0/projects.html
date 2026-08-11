@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects — Eliott</title>
+  <title>Projects — Alexander McQueen</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet"/>
@@ -35,8 +35,8 @@
   <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="scrolled?'bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm shadow-black/5':'bg-transparent'">
     <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="index.html" class="font-display font-bold text-xl tracking-tight z-10">
-        <span class="text-zinc-900 dark:text-white">eli</span><span class="text-accent">ott</span>
+      <a href="index.html" class="z-10 inline-flex items-center justify-center overflow-hidden rounded-full border-2 border-zinc-200 bg-white/80 p-0.5 shadow-sm shadow-zinc-400/20 ring-1 ring-zinc-900/5 transition-transform hover:scale-105" aria-label="Go to homepage">
+        <img src="../WhatsApp Image 2026-08-12 at 01.44.08.jpeg" alt="Alexander McQueen logo" class="h-10 w-10 md:h-11 md:w-11 object-cover rounded-full" />
       </a>
       <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
         <li><a href="index.html#services" class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Services</a></li>
@@ -72,9 +72,9 @@
     <section class="pt-36 pb-12 relative overflow-hidden">
       <div class="absolute top-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
       <div class="max-w-6xl mx-auto px-6 relative z-10">
-        <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Portfolio</p>
-        <h1 class="reveal font-display font-bold text-5xl md:text-6xl text-zinc-900 dark:text-white leading-tight mb-4">All Projects</h1>
-        <p class="reveal text-lg text-zinc-500 dark:text-zinc-400 max-w-xl leading-relaxed mb-8">A complete look at my work across UI/UX design, frontend development and landing pages.</p>
+        <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">GitHub</p>
+        <h1 class="reveal font-display font-bold text-5xl md:text-6xl text-zinc-900 dark:text-white leading-tight mb-4">Repositories</h1>
+        <p class="reveal text-lg text-zinc-500 dark:text-zinc-400 max-w-xl leading-relaxed mb-8">A collection of the projects I’ve built across automation, systems programming, backend logic, and web development.</p>
         <div class="reveal flex flex-wrap gap-2">
           <template x-for="f in filterOptions" :key="f.value">
             <button
@@ -138,25 +138,11 @@
       </div>
     </section>
 
-    <section class="pb-24">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="bg-zinc-900 dark:bg-zinc-800 rounded-3xl p-10 md:p-14 text-center relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl pointer-events-none"></div>
-          <div class="absolute bottom-0 left-0 w-40 h-40 bg-accent/10 rounded-full blur-2xl pointer-events-none"></div>
-          <div class="relative z-10">
-            <p class="text-xs font-medium text-accent tracking-widest uppercase mb-4">Ready to start?</p>
-            <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-4">Want your project here?</h2>
-            <p class="text-zinc-400 max-w-md mx-auto mb-8">I'm available for new projects. Tell me about what you're building and let's see if we're a good fit.</p>
-            <a href="index.html#contact" class="inline-flex items-center gap-2 btn-primary bg-accent text-white font-medium px-8 py-3.5 rounded-full hover:bg-accent-light transition-colors">Start a project &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="border-t border-zinc-100 dark:border-zinc-900">
     <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-zinc-400">&copy; <span id="year"></span> Eliott. All rights reserved.</p>
+      <p class="text-sm text-zinc-400">&copy; <span id="year"></span> Alexander McQueen. All rights reserved.</p>
       <p class="text-xs text-zinc-500">Built with Tailwind CSS &amp; Alpine.js</p>
     </div>
   </footer>
@@ -170,23 +156,45 @@
         filter: 'all',
 
         filterOptions: [
-          { value: 'all',       label: 'All (9)' },
-          { value: 'saas',      label: 'SaaS' },
-          { value: 'landing',   label: 'Landing page' },
-          { value: 'agency',    label: 'Agency' },
-          { value: 'ecommerce', label: 'E-commerce' },
+          { value: 'all', label: 'All (3)' },
+          { value: 'automation', label: 'Automation' },
+          { value: 'collab', label: 'Collaboration' },
         ],
 
         allProjects: [
-          { id:1,  title:'Novu — SaaS Dashboard',  category:'saas',      categoryLabel:'SaaS',         tags:['SaaS','Figma','Tailwind'],           year:'2025', desc:'Complete redesign of a B2B notification platform. Reduced cognitive load by 40% and improved trial-to-paid conversion.',    img:'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700&q=80',  url:'case-study.html' },
-          { id:2,  title:'Finlo — Fintech App',    category:'landing',   categoryLabel:'Landing page', tags:['Landing page','Fintech','Alpine.js'], year:'2024', desc:'Marketing site and onboarding flow for a personal finance app targeting young professionals.',                              img:'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80', url:'case-study.html' },
-          { id:3,  title:'Orea — Creative Agency', category:'agency',    categoryLabel:'Agency',       tags:['Agency','Animation'],                year:'2024', desc:'Bold editorial site for a Paris-based branding studio. Scroll-driven animations and custom cursor.',                      img:'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=700&q=80', url:'case-study.html' },
-          { id:4,  title:'Vesta — Real Estate',    category:'landing',   categoryLabel:'Landing page', tags:['Landing page','Real Estate'],         year:'2024', desc:'Conversion-focused landing page for a proptech startup entering the French market.',                                      img:'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80',  url:'case-study.html' },
-          { id:5,  title:'Arkio — SaaS Analytics', category:'saas',      categoryLabel:'SaaS',         tags:['SaaS','Dashboard','Figma'],           year:'2024', desc:'Data visualisation dashboard for a B2B analytics platform. Designed for clarity at high data density.',                img:'https://images.unsplash.com/photo-1581472723648-909f4851d4ae?w=700&q=80', url:'case-study.html' },
-          { id:6,  title:'Bloom — E-commerce',     category:'ecommerce', categoryLabel:'E-commerce',   tags:['E-commerce','Shopify'],               year:'2023', desc:'Custom Shopify theme for a sustainable cosmetics brand. Mobile-first with high emphasis on product imagery.',           img:'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=700&q=80',  url:'case-study.html' },
-          { id:7,  title:'Mira — Health App',      category:'landing',   categoryLabel:'Landing page', tags:['Landing page','Health','Tailwind'],   year:'2023', desc:'App landing page for a mental wellness startup. Warm, accessible design with strong social proof.',                    img:'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&q=80', url:'case-study.html' },
-          { id:8,  title:'Noto — Agency Rebrand',  category:'agency',    categoryLabel:'Agency',       tags:['Agency','Rebrand'],                  year:'2023', desc:'Full rebrand and website for a digital communications agency in Lyon.',                                                img:'https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80', url:'case-study.html' },
-          { id:9,  title:'Kova — E-commerce',      category:'ecommerce', categoryLabel:'E-commerce',   tags:['E-commerce','Figma'],                year:'2023', desc:'Product page redesign and checkout optimisation for a DTC furniture brand. Reduced cart abandonment by 18%.',         img:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80',  url:'case-study.html' },
+          {
+            id: 1,
+            title: 'BTC Trading Bot',
+            category: 'automation',
+            categoryLabel: 'Automation',
+            tags: ['Python', 'Automation', 'Trading'],
+            year: '2025',
+            desc: 'Modular Bitcoin trading bot with MACD and RSI logic, backtesting simulation mode, and VPS-ready deployment workflows.',
+            img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=700&q=80',
+            url: 'projects.html'
+          },
+          {
+            id: 2,
+            title: 'Wi‑Fi Billing System',
+            category: 'automation',
+            categoryLabel: 'Automation',
+            tags: ['Networking', 'PHP', 'Billing'],
+            year: '2024',
+            desc: 'A custom full-stack network administration and billing platform for user authentication, package selection, and live session management.',
+            img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80',
+            url: 'projects.html'
+          },
+          {
+            id: 3,
+            title: 'PHINALEX Enterprise Platform',
+            category: 'collab',
+            categoryLabel: 'Collaboration',
+            tags: ['Team Project', 'Enterprise', 'Full Stack'],
+            year: '2026',
+            desc: 'A collaborative enterprise platform project where I contributed to building structure, logic, and product features alongside a team.',
+            img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80',
+            url: 'projects.html'
+          }
         ],
 
         get visibleCount() {
