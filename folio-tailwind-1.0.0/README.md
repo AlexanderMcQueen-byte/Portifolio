@@ -4,7 +4,7 @@ A personal portfolio website built with HTML, Tailwind CSS, and Alpine.js.
 
 ## Overview
 
-This project is a custom developer portfolio for Alexander McQueen, featuring a landing page, project gallery, blog, and case-study style content.
+This project is a custom developer portfolio for IAN (Alexander), featuring a landing page, project gallery, blog, and case-study style content.
 
 ## Local run
 
