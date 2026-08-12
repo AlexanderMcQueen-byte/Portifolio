@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Critical rendering path: speed tricks that actually matter — Alexander McQueen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body{font-family:DM Sans, sans-serif}.photo-frame img{width:100%;height:100%;object-fit:cover}</style>
+</head>
+<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
+  <main>
+    <article>
+      <header class="pt-32 pb-8 max-w-3xl mx-auto px-6">
+        <a href="blog.html" class="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-accent mb-6">← Back to blog</a>
+        <div class="flex items-baseline gap-3 mb-4">
+          <span class="text-xs bg-orange-50 text-accent px-2.5 py-1 rounded-full">Dev</span>
+          <span class="text-xs text-zinc-400">Sep 12, 2024 · 5 min read</span>
+        </div>
+        <h1 class="font-display font-bold text-4xl text-zinc-900 mb-4">Critical rendering path: speed tricks that actually matter</h1>
+        <p class="text-lg text-zinc-500 mb-6">A practical guide to measuring and improving real-world page load for modern SPAs.</p>
+
+        <div class="flex items-center gap-4 py-4 border-t border-b border-zinc-100 mt-6">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+            <img src="alexander.jpg" alt="Alexander McQueen" loading="lazy" />
+          </div>
+          <div>
+            <p class="font-medium text-zinc-900">Alexander McQueen</p>
+            <p class="text-xs text-zinc-500">Computer Science student & full-stack developer</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="max-w-4xl mx-auto px-6 mb-10">
+        <div class="photo-frame w-full h-72 rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=1200&q=80" alt="Performance metrics" />
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-6 pb-16 prose-article">
+        <h2>Measure, don't guess</h2>
+        <p>Start with real user metrics (FCP, LCP, TTFB). Optimisations without measurement are guesses and often waste time.</p>
+
+        <h2>Prioritise visible content</h2>
+        <p>Inline above-the-fold CSS, lazy-load below-the-fold images, and defer non-critical JS to reduce the critical path.</p>
+
+        <blockquote>
+          <p>"Optimise what's on the critical path first — everything else is secondary."</p>
+        </blockquote>
+
+        <h2>Practical tips</h2>
+        <ul>
+          <li>Use <strong>preload</strong> for hero fonts and critical assets.</li>
+          <li>Compress images and serve responsive sizes.</li>
+          <li>Split hydration for large SPAs when possible.</li>
+        </ul>
+
+        <hr/>
+        <p><em>Want me to run a quick Lighthouse audit on your site and send a short action list?</em></p>
+      </div>
+    </article>
+  </main>
+  <footer class="border-t border-zinc-100 py-8 text-center text-sm text-zinc-400">© <span id="yr"></span> Alexander McQueen</footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

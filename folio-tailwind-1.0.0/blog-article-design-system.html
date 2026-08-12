@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Building a design system quickly — Alexander McQueen" />
+  <title>Building a design system from scratch in a weekend — Alexander McQueen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet"/>
+  <style>body{font-family:DM Sans, sans-serif}.photo-frame img{width:100%;height:100%;object-fit:cover}[x-cloak]{display:none!important}</style>
+</head>
+<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
+  <main>
+    <article>
+      <header class="pt-32 pb-8 max-w-3xl mx-auto px-6">
+        <a href="blog.html" class="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-accent mb-6">← Back to blog</a>
+        <div class="flex items-baseline gap-3 mb-4">
+          <span class="text-xs bg-orange-50 text-accent px-2.5 py-1 rounded-full">Dev</span>
+          <span class="text-xs text-zinc-400">Feb 21, 2025 · 6 min read</span>
+        </div>
+        <h1 class="font-display font-bold text-4xl text-zinc-900 mb-4">Building a design system from scratch in a weekend</h1>
+        <p class="text-lg text-zinc-500 mb-6">Tokens, components, docs — the exact process I follow to spin up a coherent design system in 48 hours.</p>
+
+        <div class="flex items-center gap-4 py-4 border-t border-b border-zinc-100 mt-6">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+            <img src="alexander.jpg" alt="Alexander McQueen" loading="lazy" />
+          </div>
+          <div>
+            <p class="font-medium text-zinc-900">Alexander McQueen</p>
+            <p class="text-xs text-zinc-500">Computer Science student & full-stack developer</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="max-w-4xl mx-auto px-6 mb-10">
+        <div class="photo-frame w-full h-72 rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=1200&q=80" alt="Design system components" />
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-6 pb-16 prose-article">
+        <h2>Start with a token map</h2>
+        <p>Begin by defining a minimal token set: color palette, type scale, spacing units, and a couple of elevation levels. Keep it intentionally small — this reduces decision friction and prevents bikeshedding.</p>
+
+        <blockquote>
+          <p>"A good design system makes the conscious decisions for you, so the team can focus on product problems."</p>
+        </blockquote>
+
+        <h2>Component-first, not atom-first</h2>
+        <p>Identify the highest-value components used across pages (buttons, inputs, cards). Build these with tokens and document variants. Reuse beats perfection.</p>
+
+        <h2>Docs as the API</h2>
+        <p>Ship documentation alongside components: examples, dos & don'ts, code snippets. The docs are the contract between designers and implementers.</p>
+
+        <ul>
+          <li><strong>Tokens:</strong> centralised and versioned.</li>
+          <li><strong>Components:</strong> small, composable, and documented.</li>
+          <li><strong>Automation:</strong> linting, visual regression, and storybook.</li>
+        </ul>
+
+        <hr/>
+        <p><em>Want a starter kit? I can scaffold a tiny design-system repo with tokens, a few components, and Storybook — tell me which framework you prefer.</em></p>
+      </div>
+    </article>
+  </main>
+  <footer class="border-t border-zinc-100 py-8 text-center text-sm text-zinc-400">© <span id="yr"></span> Alexander McQueen</footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

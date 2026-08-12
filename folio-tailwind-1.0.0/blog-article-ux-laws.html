@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The 7 UX laws every frontend dev should memorise — Alexander McQueen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body{font-family:DM Sans, sans-serif}.photo-frame img{width:100%;height:100%;object-fit:cover}</style>
+</head>
+<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
+  <main>
+    <article>
+      <header class="pt-32 pb-8 max-w-3xl mx-auto px-6">
+        <a href="blog.html" class="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-accent mb-6">← Back to blog</a>
+        <div class="flex items-baseline gap-3 mb-4">
+          <span class="text-xs bg-orange-50 text-accent px-2.5 py-1 rounded-full">Design</span>
+          <span class="text-xs text-zinc-400">Nov 18, 2024 · 6 min read</span>
+        </div>
+        <h1 class="font-display font-bold text-4xl text-zinc-900 mb-4">The 7 UX laws every frontend dev should memorise</h1>
+        <p class="text-lg text-zinc-500 mb-6">Fitts's Law, Hick's Law and more — quick reminders to guide interface decisions.</p>
+
+        <div class="flex items-center gap-4 py-4 border-t border-b border-zinc-100 mt-6">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+            <img src="alexander.jpg" alt="Alexander McQueen" loading="lazy" />
+          </div>
+          <div>
+            <p class="font-medium text-zinc-900">Alexander McQueen</p>
+            <p class="text-xs text-zinc-500">Computer Science student & full-stack developer</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="max-w-4xl mx-auto px-6 mb-10">
+        <div class="photo-frame w-full h-72 rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80" alt="UX sketches" />
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-6 pb-16 prose-article">
+        <h2>Fitts's Law</h2>
+        <p>Targets that are larger and closer are faster to hit. Make primary actions large and easy to reach.</p>
+
+        <h2>Hick's Law</h2>
+        <p>Decision time increases with choices. Simplify options and surface advanced paths progressively.</p>
+
+        <h2>Jakob's Law</h2>
+        <p>Users prefer familiar interfaces. Leverage established patterns unless you have a strong reason not to.</p>
+
+        <h2>Other laws</h2>
+        <ul>
+          <li><strong>Miller's Law:</strong> People can hold ~7 items in short-term memory.</li>
+          <li><strong>Serial Position Effect:</strong> Items at the start and end of a list are more memorable.</li>
+          <li><strong>Occam's Razor:</strong> Prefer simpler designs when functionality is equal.</li>
+          <li><strong>Peak-End Rule:</strong> Users judge experiences by peaks and endings — polish onboarding and error states.</li>
+        </ul>
+
+        <hr/>
+        <p><em>Apply these laws during quick design reviews — they'll catch many of the subtle usability pitfalls.</em></p>
+      </div>
+    </article>
+  </main>
+  <footer class="border-t border-zinc-100 py-8 text-center text-sm text-zinc-400">© <span id="yr"></span> Alexander McQueen</footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

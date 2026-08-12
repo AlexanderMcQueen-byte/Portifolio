@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Practical serverless: when to use functions, and when not to — Alexander McQueen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body{font-family:DM Sans, sans-serif}.photo-frame img{width:100%;height:100%;object-fit:cover}</style>
+</head>
+<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
+  <main>
+    <article>
+      <header class="pt-32 pb-8 max-w-3xl mx-auto px-6">
+        <a href="blog.html" class="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-accent mb-6">← Back to blog</a>
+        <div class="flex items-baseline gap-3 mb-4">
+          <span class="text-xs bg-orange-50 text-accent px-2.5 py-1 rounded-full">Dev</span>
+          <span class="text-xs text-zinc-400">Aug 2, 2024 · 6 min read</span>
+        </div>
+        <h1 class="font-display font-bold text-4xl text-zinc-900 mb-4">Practical serverless: when to use functions, and when not to</h1>
+        <p class="text-lg text-zinc-500 mb-6">Lessons from shipping serverless backends: latency, cold starts, and cost patterns.</p>
+
+        <div class="flex items-center gap-4 py-4 border-t border-b border-zinc-100 mt-6">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+            <img src="alexander.jpg" alt="Alexander McQueen" loading="lazy" />
+          </div>
+          <div>
+            <p class="font-medium text-zinc-900">Alexander McQueen</p>
+            <p class="text-xs text-zinc-500">Computer Science student & full-stack developer</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="max-w-4xl mx-auto px-6 mb-10">
+        <div class="photo-frame w-full h-72 rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80" alt="Serverless architecture" />
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-6 pb-16 prose-article">
+        <h2>When serverless is a good fit</h2>
+        <p>Event-driven workloads, spiky traffic, and small, isolated APIs benefit most. You trade some control for operational simplicity.</p>
+
+        <h2>Watch the cost model</h2>
+        <p>High-throughput, long-running processes can become expensive on pay-per-invocation models. Always estimate with realistic traffic.</p>
+
+        <blockquote>
+          <p>"Serverless removes ops friction — but it doesn't remove the need to understand latency and cost."</p>
+        </blockquote>
+
+        <h2>Mitigations</h2>
+        <ul>
+          <li>Use provisioned concurrency for critical endpoints to avoid cold starts.</li>
+          <li>Cache responses and offload heavy work to background jobs.</li>
+        </ul>
+
+        <hr/>
+        <p><em>I can help map a serverless migration plan and cost estimate for a small API — send me traffic numbers.</em></p>
+      </div>
+    </article>
+  </main>
+  <footer class="border-t border-zinc-100 py-8 text-center text-sm text-zinc-400">© <span id="yr"></span> Alexander McQueen</footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

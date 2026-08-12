@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Practical Python coding: clean, readable, and testable code — Alexander McQueen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body{font-family:DM Sans, sans-serif}.photo-frame img{width:100%;height:100%;object-fit:cover}.prose-article p{color:#52525b}.dark .prose-article p{color:#a1a1aa}</style>
+</head>
+<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
+  <main>
+    <article>
+      <header class="pt-32 pb-8 max-w-3xl mx-auto px-6">
+        <a href="blog.html" class="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-accent mb-6">← Back to blog</a>
+        <div class="flex items-baseline gap-3 mb-4">
+          <span class="text-xs bg-orange-50 text-accent px-2.5 py-1 rounded-full">Dev</span>
+          <span class="text-xs text-zinc-400">Jan 14, 2025 · 9 min read</span>
+        </div>
+        <h1 class="font-display font-bold text-4xl text-zinc-900 mb-4">Practical Python coding: clean, readable, and testable code</h1>
+        <p class="text-lg text-zinc-500 mb-6">Concrete tips, patterns, and short examples to help you write Python code that others (and future you) can maintain.</p>
+
+        <div class="flex items-center gap-4 py-4 border-t border-b border-zinc-100 mt-6">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+            <img src="alexander.jpg" alt="Alexander McQueen" loading="lazy" />
+          </div>
+          <div>
+            <p class="font-medium text-zinc-900">Alexander McQueen</p>
+            <p class="text-xs text-zinc-500">Computer Science student & full-stack developer</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="max-w-4xl mx-auto px-6 mb-10">
+        <div class="photo-frame w-full h-72 rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80" alt="Python coding" />
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-6 pb-16 prose-article">
+        <h2>1. Follow a consistent style</h2>
+        <p>Use <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> as your base. Consistent naming, spacing, and structure makes code readable instantly. Prefer descriptive names over clever short ones.</p>
+
+        <h2>2. Keep functions small and focused</h2>
+        <p>Each function should do one thing. If you can name a function in a single phrase, its intent is likely clear. Small functions are easier to test and reason about.</p>
+
+        <h2>3. Document behavior, not implementation</h2>
+        <p>Docstrings should explain the function's contract: inputs, outputs, and side effects. For example:</p>
+
+        <pre class="bg-zinc-900 text-white p-4 rounded-md"><code>def normalize_name(name: str) -&gt; str:
+    """Return a lowercase, stripped version of `name`.
+
+    Args:
+      name: the input name string
+
+    Returns:
+      Normalized name.
+    """
+    return name.strip().lower()</code></pre>
+
+        <h2>4. Prefer explicitness</h2>
+        <p>Use explicit conversions and clear control flow. Avoid hidden side-effects and implicit globals. Explicit code is easier to debug.</p>
+
+        <h2>5. Write tests for behaviour</h2>
+        <p>Tests are documentation and safety. Use pytest for small projects and focus tests on observable behaviour (inputs → outputs), not internal implementation.</p>
+
+        <h2>6. Handle errors intentionally</h2>
+        <p>Catch exceptions where recovery is possible and let them bubble up otherwise. Avoid blanket except: clauses; prefer catching specific exceptions.</p>
+
+        <blockquote>
+          <p>"If your code is hard to test, it's probably doing too much."</p>
+        </blockquote>
+
+        <h2>7. Use typing where it helps</h2>
+        <p>Type hints improve tooling, readability, and refactoring confidence. They don't replace tests, but they reduce simple mistakes.</p>
+
+        <h2>8. Organize modules by feature</h2>
+        <p>Group code by feature or domain (not by type). This reduces cross-module coupling and makes it easier to find related code.</p>
+
+        <h2>9. Performance: measure first</h2>
+        <p>Before optimising, profile your code. Use <code>timeit</code>, cProfile or sampling profilers. Often algorithmic changes beat micro-optimisations.</p>
+
+        <h2>10. Keep dependencies minimal</h2>
+        <p>Install only what you need. Prefer stdlib solutions when they are sufficient; third-party libraries add maintenance and potential security surface.</p>
+
+        <hr/>
+        <p><em>If you'd like, I can convert one of your small scripts into a tested, type-hinted module and add a CI workflow to run pytest.</em></p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="border-t border-zinc-100 py-8 text-center text-sm text-zinc-400">© <span id="yr"></span> Alexander McQueen</footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

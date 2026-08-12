@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to become a developer — Consistency, focus, and one way to start — Alexander McQueen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body{font-family:DM Sans, sans-serif}.photo-frame img{width:100%;height:100%;object-fit:cover}.prose-article p{color:#52525b}.dark .prose-article p{color:#a1a1aa}</style>
+</head>
+<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
+  <main>
+    <article>
+      <header class="pt-32 pb-8 max-w-3xl mx-auto px-6">
+        <a href="blog.html" class="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-accent mb-6">← Back to blog</a>
+        <div class="flex items-baseline gap-3 mb-4">
+          <span class="text-xs bg-orange-50 text-accent px-2.5 py-1 rounded-full">Career</span>
+          <span class="text-xs text-zinc-400">Mar 1, 2025 · 7 min read</span>
+        </div>
+        <h1 class="font-display font-bold text-4xl text-zinc-900 mb-4">How to become a developer: consistency, focus, and one practical way to start</h1>
+        <p class="text-lg text-zinc-500 mb-6">Becoming a developer isn't about talent — it's about consistency, habits, and shipping small, meaningful projects. Here's a clear path you can start today.</p>
+
+        <div class="flex items-center gap-4 py-4 border-t border-b border-zinc-100 mt-6">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+            <img src="alexander.jpg" alt="Alexander McQueen" loading="lazy" />
+          </div>
+          <div>
+            <p class="font-medium text-zinc-900">Alexander McQueen</p>
+            <p class="text-xs text-zinc-500">Computer Science student & full-stack developer</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="max-w-4xl mx-auto px-6 mb-10">
+        <div class="photo-frame w-full h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-700 flex items-center justify-center">
+          <img src="assets/developer-photo.jpg" alt="Developer writing code" class="w-full h-full object-cover"/>
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-6 pb-16 prose-article">
+        <h2>Start with the mindset: consistency beats bursts</h2>
+        <p>Most people overestimate what they can do in a weekend and underestimate what steady effort produces in three months. Pick a small, repeatable habit — for example, code for 30 minutes a day — and stick with it. Consistency compounds.</p>
+
+        <h2>Put yourself together: routines, resources, and community</h2>
+        <p>Becoming a developer is as much about organisation as it is about code. Create a simple routine: a learning plan, a focus block in your calendar, and a place to track progress (notion, journal, or a repo README).</p>
+        <ul>
+          <li><strong>Schedule:</strong> Block 3 x 30-minute sessions per week, treat them as non-negotiable.</li>
+          <li><strong>Resources:</strong> Use one reliable path (MDN for web, Python docs for Python, freeCodeCamp, or an online course).</li>
+          <li><strong>Community:</strong> Join a small study group or an online forum to get feedback and accountability.</li>
+        </ul>
+
+        <h2>One way to start — build a tiny, useful project</h2>
+        <p>Pick a project that solves a real problem for you. A personal website, a daily task tracker, or a tiny CLI tool are perfect first projects. The goal is completion: an MVP you can iterate on. Here's a simple starter recipe:</p>
+        <ol>
+          <li>Choose the stack: one language and minimal tools (e.g., Python + Flask, or HTML/CSS + vanilla JS).</li>
+          <li>Define the MVP: the smallest useful feature set (write a task, list tasks, mark done).</li>
+          <li>Ship quickly: make a simple version in one session — it's okay if it's ugly.</li>
+          <li>Iterate: add tests, improve structure, refactor, and deploy (GitHub Pages or Vercel).</li>
+        </ol>
+
+        <h2>Practical habits that stick</h2>
+        <p>Track your tiny wins, commit code daily (even small changes), and write short notes explaining what you learned. Over time you'll accumulate a portfolio and a set of patterns that become muscle memory.</p>
+
+        <blockquote>
+          <p>"You don't become a developer by reading docs — you become one by building, failing, and fixing."</p>
+        </blockquote>
+
+        <h2>Resources to get started</h2>
+        <ul>
+          <li><a href="https://developer.mozilla.org">MDN Web Docs</a> — excellent for web foundations.</li>
+          <li><a href="https://www.freecodecamp.org">freeCodeCamp</a> — guided projects and exercises.</li>
+          <li><a href="https://docs.python.org/3/">Python docs</a> — if you’re learning Python.</li>
+          <li>Use Git and GitHub early — your commits are the history of your practice.</li>
+        </ul>
+
+        <hr/>
+        <p><em>If you want, I can suggest a three-week learning plan and the exact first project to build based on your interests — web, data, or automation.</em></p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="border-t border-zinc-100 py-8 text-center text-sm text-zinc-400">© <span id="yr"></span> Alexander McQueen</footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
