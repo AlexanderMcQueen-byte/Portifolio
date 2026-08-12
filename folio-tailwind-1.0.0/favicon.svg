@@ -13,7 +13,7 @@
     </filter>
   </defs>
   <circle cx="32" cy="32" r="30" fill="url(#bg)"/>
-  <path d="M18 46 L24 21 L31 21 L40 46 L46 46 L33 18 L22 18 Z" fill="#fff" filter="url(#shadow)"/>
-  <path d="M24 24 L30 24 L35 40 L28 40 Z" fill="#0F172A"/>
-  <path d="M22 42 C26 38 33 34 40 34 C44 34 46 36 46 37 C46 40 42 42 36 42 C31 42 27 42 22 46 Z" fill="url(#accent)"/>
+  <path d="M16 46 L24 16 L32 16 L44 46 L50 46 L34 14 L22 14 Z" fill="#fff" filter="url(#shadow)"/>
+  <path d="M24 24 L32 24 L38 42 L30 42 Z" fill="#0F172A"/>
+  <path d="M20 44 C26 38 34 33 44 33 C48 33 52 36 52 39 C52 43 47 46 40 46 C34 46 28 46 20 50 Z" fill="url(#accent)"/>
 </svg>
