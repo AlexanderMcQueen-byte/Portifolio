@@ -345,12 +345,12 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
           <svg class="w-4 h-4 text-accent fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
           <svg class="w-4 h-4 text-accent fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
         </div>
-        <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 italic">"Alexander's ability to jump between backend logic and frontend design is impressive. The integration of the system using PHP and custom CSS was flawless."</p>
+        <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 italic">"He understood exactly what we needed, turned the idea into a clean product, and made the whole process feel easy from start to finish. The final result felt premium and worked even better than we imagined."</p>
         <footer class="flex items-center gap-3">
-          <div class="pf w-10 h-10 rounded-full shrink-0"><img src="https://i.pravatar.cc/80?img=11" alt="Sarah M." loading="lazy"></div>
+          <div class="pf w-10 h-10 rounded-full shrink-0"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Daniel K." loading="lazy"></div>
           <div>
-            <p class="font-medium text-sm text-zinc-900 dark:text-white">Sarah M.</p>
-            <p class="text-xs text-zinc-500">Project Manager</p>
+            <p class="font-medium text-sm text-zinc-900 dark:text-white">Daniel K.</p>
+            <p class="text-xs text-zinc-500">Testers</p>
           </div>
         </footer>
       </blockquote>
@@ -478,11 +478,11 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
           <p class="reveal d2 text-zinc-400 leading-relaxed mb-8">I'm open to full-stack development, bot automation, and software engineering missions. Need a trading script, a full web application, or just a second pair of eyes — let's talk.</p>
 
           <div class="reveal d3 flex flex-col gap-4">
-            <a href="mailto:alexandermcqueen136@gmail.com" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+            <a href="mailto:alexanderwachira136@gmail.com" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
               <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               </span>
-              <span class="text-sm">alexandermcqueen136@gmail.com</span>
+              <span class="text-sm">alexanderwachira136@gmail.com</span>
             </a>
             <a href="https://linkedin.com/in/alexander-mcqueen" rel="noopener noreferrer" target="_blank" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
               <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
@@ -574,7 +574,7 @@ function app() {
 
       const contactForm = document.getElementById('contactForm');
       const formSuccess = document.getElementById('formSuccess');
-      const GMAIL_WEB_APP_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+      const GMAIL_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbycFLOKU9jJzGAWtINw2iLog4ENKx5aiqW4WHEi4r_zd10sFVvM7_V9sZag-n4q9X7yyg/exec';
 
       if (contactForm && formSuccess) {
         contactForm.addEventListener('submit', async (event) => {
@@ -594,17 +594,27 @@ function app() {
             return;
           }
 
-          formSuccess.classList.remove('hidden');
-          contactForm.reset();
-
           try {
-            await fetch(GMAIL_WEB_APP_URL, {
+            const response = await fetch(GMAIL_WEB_APP_URL, {
               method: 'POST',
-              mode: 'no-cors',
-              body: formData
+              mode: 'cors',
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
             });
+
+            if (!response.ok) {
+              throw new Error(`HTTP ${response.status}`);
+            }
+
+            formSuccess.classList.remove('hidden');
+            contactForm.reset();
           } catch (error) {
-            console.warn('Contact form submission warning:', error);
+            console.error('Contact form submission warning:', error);
+            formSuccess.textContent = 'There was a problem sending your message. Please email me directly at alexanderwachira136@gmail.com.';
+            formSuccess.classList.remove('hidden');
+            formSuccess.classList.add('text-amber-300');
           }
         });
       }
